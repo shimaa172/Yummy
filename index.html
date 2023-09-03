@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- bootstrap css file -->
+    <link rel='stylesheet' type='text/css' media='screen' href="libs/Bootstrap/css/bootstrap.min.css">
+    <!-- main css file -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <!-- Fontawsome -->
+    <link rel='stylesheet' type='text/css' media='screen' href="libs/fontawsome/css/all.min.css">
+</head>
+
+<body>
+    <!-- Start Loading Section -->
+    <div
+        class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <!-- End Loading Section -->
+
+    <!-- Start Sidebar Section -->
+    <div class="sidebar d-flex min-vh-100 position-fixed top-0">
+        <!-- menu -->
+        <div class="nav-tab d-flex flex-column justify-content-between min-vh-100 p-4">
+            <!-- links -->
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="showSearchInputs() ; closeSideBar()" class="py-2 position-relative " role="button"
+                        style="top: 0px;">Search</li>
+                    <li onclick="getCategories() ; closeSideBar()" class="py-2 position-relative " role="button"
+                        style="top: 0px;">Categories</li>
+                    <li onclick="getArea() ; closeSideBar()" class="py-2 position-relative " role="button"
+                        style="top: 0px;">Area</li>
+                    <li onclick="getIngredients() ; closeSideBar()" class="py-2 position-relative " role="button"
+                        style="top: 0px;">Ingredients</li>
+                    <li onclick="showContacts(); closeSideBar()" class="py-2 position-relative " role="button"
+                        style="top: 0px;">Contact Us</li>
+                </ul>
+            </div>
+            <!-- menu-footer -->
+            <div class="menu-footer">
+                <!-- icons -->
+                <div class="icons">
+                    <i class="fa-brands fa-facebook" role="button"></i>
+                    <i class="fa-brands fa-twitter" role="button"></i>
+                    <i class="fa-solid fa-globe" role="button"></i>
+                </div>
+                <!-- footer -->
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar-icon -->
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="images/logo.png" alt="" srcset="">
+            <i class="fa-solid open-close-icon fa-2x" role="button"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block" role="button"></i>
+                <i class="fa-solid fa-share-nodes" role="button"></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar Section -->
+
+    <!-- Start Main Section -->
+    <div class="container w-75" id="searchContainer">
+    </div>
+    <div class="main min-vh-100 position-relative">
+        <div class="container">
+            <div class="row py-5 g-4 " id="rowData">
+
+            </div>
+        </div>
+    </div>
+    <!-- End Main Section -->
+
+    <!-- bootstrap js file -->
+    <script src="libs/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery file -->
+    <script src="js/jquery.js"></script>
+    <!-- main js file -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
